@@ -1,0 +1,148 @@
+#Lekikon
+
+x: str = "hw"
+print (x)
+
+print (not(a==b))
+
+ist_wetter_gut = False
+if ist_wetter_gut:
+    print("sonnenbrille")
+else:
+    print("regenschirm")
+
+d = 0
+
+while d <=5:
+    print("hhh")
+    d = d+1
+
+liste = [1,2,3,4]
+for eintrag in liste:
+    print(eintrag +1)
+
+x = 10
+
+def doppelt(zahl):
+    neue_zahl = zahl * 2
+    return neue_zahl
+
+x = doppelt(x)
+x = x+1
+x = doppelt(x)
+
+print (x)
+
+x = 42
+y = 3.14
+name = "Katharina Zwick"
+
+calculate_x_y = x + y
+produkt = x * y
+differenz = x - y
+quotient = x / y
+x = x * 10
+name + "lernt gerade"
+kette = "56"
+umgewandelt = int(kette)
+
+if x == 50:
+    print("x ist gleich 50")
+
+if x >= 50:
+    print("x ist größer")
+
+var_age = input ()
+if var >= 18:
+    print("volljährig")
+else:
+    print("minderjährig")
+
+if len(name) >10:
+    print("länger 10")
+if len(name) == 10:
+    print ("gleich 10")
+
+string_weather = input ("")
+if string_weather == "bad":
+    print ("use umbrella" )
+
+citys = ["Hamburg", "Berlin", "Stuttgart", "Heidenheim", "Grünheide"]
+
+
+print(citys[0])
+print(len(citys), citys[-1])
+citys.remove("Grünheide")
+print(citys)
+citys.remove(citys[-1])
+print(citys)
+
+a_1 = [1,2,3]
+a_2 = [4,5,6]
+
+a_1.extend(a_2)
+print(a_1)
+
+print(a_1[1:3])
+print(a_1[1:])
+print(a_1[:3])
+
+s = {
+    "name" :"alice",
+    "age": 24,
+    "city" : "Berlin"
+}
+
+print(s["age"])
+print(s.get("secondname", "no second name"))
+print(s.keys)
+print(s.values)
+
+#text just for fun
+"""
+text with more place
+"""
+
+eingabe = input()
+print("du hast eingegeben", eingabe)
+
+file= open("datei.txt")
+print(file.read())
+file.close()
+
+with open("datei.txt", "x") as file:
+    pass #platzhalter für da kommt noch was
+    #print(file.read())
+    file.write("any text") #text einfügen
+
+try:
+    with open("datei.txt", "x") as file:
+        print(file.read())
+except Exception: #fileNotFoundError zb findet nur bestimmten Fehler statt Exception
+    print("fehler")
+
+////////////////////////////////////////////////////////
+var_numberofmarks = 3
+marks = [1,2,3]
+print(sum(marks))
+
+average = sum(marks) / var_numberofmarks
+
+print(average)
+
+/////////////////////////////////////////
+
+def add(a: int, b: int) -> int:
+    return (a+b) **2
+
+def super_add(a: int, b: int) -> int:
+    return (a+b)
+
+#virtuell andere Datei:
+from Dateiname import add as superdupper_add
+print(superdupper_add(1,2))
+
+#__init__py in anderen ordner tun
+#wenn datei in anderen ordner
+from ordner.Dateiname import add
+print(add(1,2))
